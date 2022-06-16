@@ -1,0 +1,45 @@
+
+    <h3>Agenda una clase con nuestros profesores</h3>
+
+    <div class="container">
+        <form action="/schedule" method="POST">
+            <div class="col-md-5 ">
+                <label for="Materia " class="form-label "></label>
+                <select name="materia" id="materia " class="form-control ">
+                    <option value=" ">Elige la materia que quieres tomar</option>
+                    <option value="mate ">Matemáticas</option>
+                    <option value="fisica ">Física</option>
+                    <option value="info ">Informática</option>
+                </select>
+            </div>
+            <div class="col-md-5 ">
+                <label for="Escolaridad " class="form-label "></label>
+                <select name="escolaridad" id="escolaridad " class="form-control ">
+                    <option value=" ">Elige la escolaridad de tu hijo</option>
+                    <option value="primaria ">Primaria</option>
+                    <option value="secundaria ">Secundaria</option>
+                    <option value="prepa ">Preparatoria</option>
+                </select>
+            </div>
+            <div class="col-md-5 ">
+                <label for="tipoDePago " class="form-label "></label>
+                <select name="tipoDePago" id="tipoDePago " class="form-control ">
+                    <option value=" ">Elige el tipo de pago</option>
+                    <option value="efectivo ">Efectivo</option>
+                    <option value="deposito ">Depósito</option>
+                </select>
+            </div>
+            <div class="col-md-5 ">
+                <label for="Horario " class="form-label "></label>
+                <select id="horario " class="form-control ">
+                    <option value=" ">Elige tu horario</option>
+                    <option value="horario01 ">13:00-15:00</option>
+                    <option value="horario02 ">15:00-17:00</option>
+                    <option value="horario03 ">17:00-19:00</option>
+                    <option value="horario04 ">19:00-21:00</option>
+                </select>
+            </div>
+            <button type="submit " class="btn btn-primary " >Agendar Clase</button>
+
+        </form>
+    </div>

@@ -1,0 +1,27 @@
+
+    <h3>Registrate a nuestra red de estudiantes</h3>
+
+    <div class="container">
+        <form action="/authentication/register" method="POST">
+            <div class="mb-3">
+                <input type="text" name="userLastName" class="form-control" id="apellidoPaternoCliente" maxlength="20" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+                <label for=" apellidoPaterno " class="form-label">Ingresa tu apellido paterno aquí</label>
+                <div id="apellidoCliente " class="form-text "></div>
+            </div>
+            <div class="mb-3 ">
+                <input type="text " class="form-control " name="userName" class="form-control" id="apellidonombreCliente "maxlength="15 " oninput="if(this.value.length> this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                <label for="nombreCliente " class="form-label ">Ingresa tu nombre aquí</label>
+                <div id="nombreCliente " class="form-text "></div>
+            </div>
+            <div class="mb-3 ">
+                <input type="email " class="form-control " name="email" id="correoCliente "maxlength="25" oninput="if(this.value.length> this.maxLength) this.value = this.value.slice(0, this.maxLength);" >
+                <label for=" correo " class="form-label ">Correo</label>
+            </div>
+            <div class="mb-3 ">
+                <input type="password" class="form-control " name="pwd" id=" contrasenaCliente " maxlength="10" oninput="if(this.value.length> this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                <label class="contrasena " for="telefono">Contraseña</label>
+            </div>
+            <button type="submit " class="btn btn-primary btn-block">Registrar</button>
+
+        </form>
+    </div>

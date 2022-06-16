@@ -4,7 +4,7 @@
     "description": "proyecto final Ingenieria Web",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "nodemon src"
     },
     "keywords": [],
     "author": "Romero Montes de Oca Claudio Sebastian",
@@ -19,7 +19,9 @@
         "express-validator": "^6.14.1",
         "morgan": "^1.10.0",
         "mysql": "^2.18.1",
+        "nodemon": "^2.0.16",
         "passport": "^0.6.0",
-        "passport-local": "^1.0.0"
+        "passport-local": "^1.0.0",
+        "promisify": "0.0.3"
     }
 }
