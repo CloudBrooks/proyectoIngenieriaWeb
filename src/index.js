@@ -47,7 +47,7 @@ app.use((req, res, next) => {
         if (!app.locals.user) {
             if (req.user) {
                 app.locals.user = req.user;
-            }
+            }            
         }
         next();
     })

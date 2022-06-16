@@ -1,21 +1,31 @@
 const express = require('express');
 const router = express.Router();
+const pool = require('../database');
+const helpers = require('../lib/helpers');
 
-const passport = require('passport');
-const { isLoggedIn } = require('../lib/auth');
+router.post('/register', async(req, res) => {
+    const { userLastName, userName, email, pwd } = req.body;
+    const newUser = {
+        userLastName,
+        userName,
+        email,
+    };
+    newUser.pwd = await helpers.encryptPassword(pwd);
+    await pool.query('INSERT INTO usuario SET ?', [newUser]);
+    res.redirect('/home');
+});
 
-router.post('/register', passport.authenticate('local.signup', {
-    successRedirect: '/home',
-    failureRedirect: '/register',
-    failureFlash: true
-}))
+router.post('/login', async(req, res) => {
+    const {email, pwd} = req.body;
+    const newUser = {
+        email
+    }
+    const rows = await pool.query('Select * from usuario where email = ?', [email]);
+    const login = await helpers.matchPassword(pwd, rows[0].pwd);    
+    if (login) {
+        res.redirect('/home',);
+    }
 
-router.post('/login', (req, res, next) => {
-    passport.authenticate('local.login', {
-        successRedirect: '/home',
-        failureRedirect: '/login',
-        failureFlash: true
-    })(req, res, next);
 });
 
 
